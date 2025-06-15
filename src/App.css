@@ -107,6 +107,7 @@ div.start-screen {
   align-items: center;
   display: flex;
   gap: 12px;
+  height: 100vh;
   flex-direction: column;
 }
 
