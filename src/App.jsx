@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { decode } from "he";
 import { clsx } from "clsx";
 import "./App.css";
