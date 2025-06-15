@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  background: #f5f7fb;
+  font-family: "Karla", sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+div.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  div.questions {
+    height: 100vh;
+  }
+  div.question-card {
+    min-width: 1140px;
+  }
+}
+@media (min-width: 768px) {
+  div.question-card {
+    min-width: 100%;
+  }
+}
+
+div.questions::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url("/blob-0.png");
+  width: 297px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 235px;
+  z-index: -100;
+}
+div.questions::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("/blob-1.png");
+  width: 297px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 235px;
+  z-index: -100;
+}
+
+div.question {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+div.question-card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #d6dbf5;
+  padding: 24px;
+}
+
+div.answers {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  row-gap: 24px;
+  column-gap: 12px;
+  flex-wrap: wrap;
+}
+
+div.answer input[type="radio"] {
+  cursor: pointer;
+  display: none;
+}
+
+.answerLabel {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #293264;
+  background: transparent;
+}
+
+input[type="radio"]:checked + .answerLabel {
+  background-color: #d6dbf5;
+  color: #293264;
+  border-color: #d6dbf5;
+}
+
+.correct {
+  background: #94d7a2 !important;
+  border: 1px solid #94d7a2 !important;
+}
+
+.wrong {
+  background: #f8bcbc !important;
+  border: 1px solid #f8bcbc !important;
+}
+
+div.start-screen {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+div.start-screen button {
+  padding: 16px 60px;
+  margin-top: 29px;
+  border: none;
+  background: #4d5b9e;
+  border-radius: 15px;
+  color: #fff;
+}
+
+div.start-screen p,
+div.start-screen h1 {
+  margin: 0;
+}
+
+div.start-screen h1 {
+  font-size: 2rem;
+  color: #293264;
+}
+
+.ingame-btn {
+  padding: 12px 24px;
+  border: none;
+  background: #4d5b9e;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.reset-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 24px;
+}
+.reset-game p {
+  margin: 0;
+  font-weight: 600;
+}
